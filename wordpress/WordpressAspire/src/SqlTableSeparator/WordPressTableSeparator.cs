@@ -7,8 +7,49 @@ using System.Threading.Tasks;
 
 namespace SqlTableSeparator;
 
+public class PostCategoryInfo
+{
+    public string NewInsert { get; set; } = string.Empty;
+    public string PostId { get; set; } = string.Empty;
+    public string PostCategory { get; set; } = string.Empty;
+}
+
 public class WordPressTableSeparator
 {
+
+    public PostCategoryInfo  RewriteWpPostSql(string line)
+    {
+        Regex wpPostsInsertPattern = new Regex(@"INSERT INTO `wp_posts`\s*\(([^)]+)\)\s*VALUES\s*\(([^)]+)\)", RegexOptions.IgnoreCase);
+        var wpPostsMatch = wpPostsInsertPattern.Match(line);
+        //if (wpPostsMatch.Success)
+        //{
+            var columns = wpPostsMatch.Groups[1].Value.Split(',').Select(s => s.Trim(' ', '`')).ToList();
+            var values = wpPostsMatch.Groups[2].Value.Split(',').Select(s => s.Trim()).ToList();
+            int postCategoryIdx = columns.IndexOf("post_category");
+            int idIdx = columns.IndexOf("ID");
+            // Remove post_category from columns/values for new insert
+            //if (postCategoryIdx != -1)
+            //{
+                var p = (new PostCategoryInfo
+                {
+                    PostId = values[idIdx],
+                    PostCategory = values[postCategoryIdx]
+                });
+                columns.RemoveAt(postCategoryIdx);
+                values.RemoveAt(postCategoryIdx);
+            //}
+            // Add single quotes to all values
+            for (int i = 0; i < values.Count; i++)
+            {
+                if (!values[i].StartsWith("'"))
+                    values[i] = "'" + values[i].Trim('"', '\'') + "'";
+            }
+            // Rebuild the insert statement
+            p.NewInsert = $"INSERT INTO `wp_posts`({string.Join(", ", columns.Select(c => "`" + c + "`"))}) VALUES ({string.Join(",", values)});";
+        //}
+        return p;
+    }
+
     public bool Separate(string sqlFilePath , string outputDirectory)
     {
 
@@ -26,7 +67,7 @@ public class WordPressTableSeparator
         // Regex patterns
         Regex createTablePattern = new Regex(@"CREATE TABLE `([^`]+)`", RegexOptions.IgnoreCase);
         Regex insertPattern = new Regex(@"INSERT INTO `([^`]+)`", RegexOptions.IgnoreCase);
-
+        
         try
         {
             Console.WriteLine($"Reading SQL file: {sqlFilePath}");
@@ -75,6 +116,8 @@ public class WordPressTableSeparator
                         continue;
                     }
 
+                    // Check for INSERT INTO wp_posts
+                    
                     // Handle table definition closing - look for semicolon
                     if (inTableDefinition && currentTable != "")
                     {

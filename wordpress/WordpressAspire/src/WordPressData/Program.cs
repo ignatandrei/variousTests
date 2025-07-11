@@ -1,3 +1,5 @@
+using Projects;
+
 var builder = DistributedApplication.CreateBuilder(args);
 
 //// Add MariaDB container
@@ -9,11 +11,11 @@ var builder = DistributedApplication.CreateBuilder(args);
 //    .WithVolume("mariadb_data", "/var/lib/mysql")
 //    .WithEndpoint(3306, 3306);
 
-var db = builder.AddMySql("mysql")
+var server = builder.AddMySql("mysql")
                     .WithPhpMyAdmin()
                    .WithLifetime(ContainerLifetime.Persistent);
 
-var mysqldb = db.AddDatabase("mysqldb");
+var mysqldb = server.AddDatabase("mysqldb");
 //// Add phpMyAdmin container for MariaDB management
 //var phpmyadmin = builder.AddContainer("phpmyadmin", "phpmyadmin")
 //    .WithEnvironment("PMA_HOST", db.Resource.Name)
@@ -24,11 +26,18 @@ var mysqldb = db.AddDatabase("mysqldb");
 
 // Add WordPress container
 var wordpress = builder.AddContainer("wordpress", "wordpress")
-    .WithEnvironment("WORDPRESS_DB_HOST", db.Resource.Name)
+    .WithEnvironment("WORDPRESS_DB_HOST", server.Resource.Name)
     .WithEnvironment("WORDPRESS_DB_NAME", mysqldb.Resource.Name)
     .WithEnvironment("WORDPRESS_DB_USER", "root")
-    .WithEnvironment("WORDPRESS_DB_PASSWORD", db.Resource.PasswordParameter.Value)
+    .WithEnvironment("WORDPRESS_DB_PASSWORD", server.Resource.PasswordParameter.Value)
     .WithEnvironment("WORDPRESS_DB_PORT", "3306")
     .WithVolume("wordpress_data", "/var/www/html")
     .WithHttpEndpoint(8080, 80);
+
+
+builder.AddProject<SqlTableSeparator>("DoRestore")
+    .WithReference(mysqldb)
+    .WithExplicitStart();
+
+
 builder.Build().Run();

@@ -16,5 +16,9 @@
     <PackageReference Include="Aspire.Hosting.MySql" Version="9.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SqlTableSeparator\SqlTableSeparator.csproj" />
+  </ItemGroup>
+
 </Project>
     
