@@ -39,7 +39,6 @@ public class PostCategoryInfo
 
         // Parse the values
         var values = ParseSqlValues(valuesString);
-
         if (values.Count != ColumnOrder.Length)
             throw new ArgumentException($"Expected {ColumnOrder.Length} values, but got {values.Count}");
 
@@ -132,54 +131,37 @@ public class PostCategoryInfo
 
     private static List<string> ParseSqlValues(string valuesString)
     {
-        var values = new List<string>();
+        List<string>  ret = new ();
+        var values = valuesString.Split(',',StringSplitOptions.RemoveEmptyEntries);
         var currentValue = new System.Text.StringBuilder();
         var inQuotes = false;
-        var quoteChar = '\0';
-
-        for (int i = 0; i < valuesString.Length; i++)
+        for(var i = 0; i < values.Length; i++)
         {
-            var currentChar = valuesString[i];
-
-            if (!inQuotes && (currentChar == '\'' || currentChar == '"'))
+            var value = values[i].Trim();
+            if (value.StartsWith("'") )
             {
                 inQuotes = true;
-                quoteChar = currentChar;
-                currentValue.Append(currentChar);
             }
-            else if (inQuotes && currentChar == quoteChar)
+            if (value.EndsWith("'") )
             {
-                // Check if this is an escaped quote
-                if (i + 1 < valuesString.Length && valuesString[i + 1] == quoteChar)
-                {
-                    currentValue.Append(currentChar);
-                    currentValue.Append(currentChar);
-                    i++; // Skip the next character
-                }
-                else
-                {
-                    inQuotes = false;
-                    currentValue.Append(currentChar);
-                }
+                inQuotes = false;
             }
-            else if (!inQuotes && currentChar == ',')
+            if (inQuotes)
             {
-                values.Add(currentValue.ToString().Trim());
-                currentValue.Clear();
+                currentValue.Append(value);
+                if (i < values.Length - 1)
+                {
+                    currentValue.Append(",");
+                }
             }
             else
             {
-                currentValue.Append(currentChar);
+                currentValue.Append(value);
+                ret.Add(currentValue.ToString());
+                currentValue.Clear();
             }
         }
-
-        // Add the last value
-        if (currentValue.Length > 0)
-        {
-            values.Add(currentValue.ToString().Trim());
-        }
-
-        return values;
+        return ret;
     }
 
     public static string[] GetColumnOrder()

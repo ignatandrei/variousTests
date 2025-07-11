@@ -102,10 +102,11 @@ public class MySqlDatabaseRepo
             sql = sql.Replace("0000-00-00 00:00:00", "2099-01-01 01:01:01");
             foreach (var line in sql.Split(Environment.NewLine))
             {
-                var lineSql = sep.RewriteWpPostSql(line).NewInsert;
+                var lineSql = ""; 
 
                 try
                 {
+                    lineSql= sep.RewriteWpPostSql(line).NewInsert;
                     result = await this.Execute(lineSql);
                 }
                 catch (Exception ex)

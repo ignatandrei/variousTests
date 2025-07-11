@@ -1,4 +1,5 @@
-﻿using SqlTableSeparator;
+﻿using Mysqlx.Crud;
+using SqlTableSeparator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,34 +9,6 @@ using System.Threading.Tasks;
 
 namespace SqlTableSeparator;
 
-public class WordPressPost
-{
-    public int ID { get; set; }
-    public int PostAuthor { get; set; }
-    public DateTime PostDate { get; set; }
-    public DateTime PostDateGmt { get; set; }
-    public string PostContent { get; set; } = string.Empty;
-    public string PostTitle { get; set; } = string.Empty;
-    public int PostCategory { get; set; }
-    public string PostExcerpt { get; set; } = string.Empty;
-    public string PostStatus { get; set; } = string.Empty;
-    public string CommentStatus { get; set; } = string.Empty;
-    public string PingStatus { get; set; } = string.Empty;
-    public string PostPassword { get; set; } = string.Empty;
-    public string PostName { get; set; } = string.Empty;
-    public string ToPing { get; set; } = string.Empty;
-    public string Pinged { get; set; } = string.Empty;
-    public DateTime PostModified { get; set; }
-    public DateTime PostModifiedGmt { get; set; }
-    public string PostContentFiltered { get; set; } = string.Empty;
-    public int PostParent { get; set; }
-    public string Guid { get; set; } = string.Empty;
-    public int MenuOrder { get; set; }
-    public string PostType { get; set; } = string.Empty;
-    public string PostMimeType { get; set; } = string.Empty;
-    public int CommentCount { get; set; }
-}
-
 
 
 public class WordPressTableSeparator
@@ -43,15 +16,33 @@ public class WordPressTableSeparator
 
     public PostCategoryInfo RewriteWpPostSql(string line)
     {
+        var pci=new PostCategoryInfo();
+        var post = pci.ParseInsertStatement(line);
+        var insert = "INSERT INTO `wp_posts`(";
+        insert += "`ID`, `post_author`, `post_date`, `post_date_gmt`, " +
+            "`post_content`, `post_title`, `post_excerpt`," +
+            " `post_status`, `comment_status`, `ping_status`, `post_password`, " +
+            "`post_name`, `to_ping`, `pinged`, `post_modified`," +
+            " `post_modified_gmt`, `post_content_filtered`, `post_parent`, " +
+            "`guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) ";
+        insert+="VALUES (";
+        insert += $"{post.ID}, {post.PostAuthor}, '{post.PostDate.ToString("yyyy-MM-dd HH:mm:ss")}', '{post.PostDateGmt.ToString("yyyy-MM-dd HH:mm:ss")}', ";
+        insert += $"'{post.PostContent.Replace("'", "''")}', '{post.PostTitle.Replace("'", "''")}', '{post.PostExcerpt.Replace("'", "''")}', ";
+        insert += $"'{post.PostStatus}', '{post.CommentStatus}', '{post.PingStatus}', '{post.PostPassword}', ";
+        insert += $"'{post.PostName}', '{post.ToPing}', '{post.Pinged}', '{post.PostModified.ToString("yyyy-MM-dd HH:mm:ss")}', ";
+        insert += $"'{post.PostModifiedGmt.ToString("yyyy-MM-dd HH:mm:ss")}', '{post.PostContentFiltered.Replace("'", "''")}', {post.PostParent}, ";
+        insert += $"'{post.Guid.Replace("'", "''")}', {post.MenuOrder}, '{post.PostType}', '{post.PostMimeType}', {post.CommentCount}";
+        insert +=")";
         return new PostCategoryInfo
         {
-            NewInsert = line,
-            PostId = "",
-            PostCategory = ""
+            NewInsert = insert,
+            PostId = post.ID.ToString(),
+            PostCategory = post.PostCategory.ToString()
         };
     }
 
-    
+
+
     public bool Separate(string sqlFilePath , string outputDirectory)
     {
 
