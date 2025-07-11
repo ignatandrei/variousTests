@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlTableSeparator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,49 +8,50 @@ using System.Threading.Tasks;
 
 namespace SqlTableSeparator;
 
-public class PostCategoryInfo
+public class WordPressPost
 {
-    public string NewInsert { get; set; } = string.Empty;
-    public string PostId { get; set; } = string.Empty;
-    public string PostCategory { get; set; } = string.Empty;
+    public int ID { get; set; }
+    public int PostAuthor { get; set; }
+    public DateTime PostDate { get; set; }
+    public DateTime PostDateGmt { get; set; }
+    public string PostContent { get; set; } = string.Empty;
+    public string PostTitle { get; set; } = string.Empty;
+    public int PostCategory { get; set; }
+    public string PostExcerpt { get; set; } = string.Empty;
+    public string PostStatus { get; set; } = string.Empty;
+    public string CommentStatus { get; set; } = string.Empty;
+    public string PingStatus { get; set; } = string.Empty;
+    public string PostPassword { get; set; } = string.Empty;
+    public string PostName { get; set; } = string.Empty;
+    public string ToPing { get; set; } = string.Empty;
+    public string Pinged { get; set; } = string.Empty;
+    public DateTime PostModified { get; set; }
+    public DateTime PostModifiedGmt { get; set; }
+    public string PostContentFiltered { get; set; } = string.Empty;
+    public int PostParent { get; set; }
+    public string Guid { get; set; } = string.Empty;
+    public int MenuOrder { get; set; }
+    public string PostType { get; set; } = string.Empty;
+    public string PostMimeType { get; set; } = string.Empty;
+    public int CommentCount { get; set; }
 }
+
+
 
 public class WordPressTableSeparator
 {
 
-    public PostCategoryInfo  RewriteWpPostSql(string line)
+    public PostCategoryInfo RewriteWpPostSql(string line)
     {
-        Regex wpPostsInsertPattern = new Regex(@"INSERT INTO `wp_posts`\s*\(([^)]+)\)\s*VALUES\s*\(([^)]+)\)", RegexOptions.IgnoreCase);
-        var wpPostsMatch = wpPostsInsertPattern.Match(line);
-        //if (wpPostsMatch.Success)
-        //{
-            var columns = wpPostsMatch.Groups[1].Value.Split(',').Select(s => s.Trim(' ', '`')).ToList();
-            var values = wpPostsMatch.Groups[2].Value.Split(',').Select(s => s.Trim()).ToList();
-            int postCategoryIdx = columns.IndexOf("post_category");
-            int idIdx = columns.IndexOf("ID");
-            // Remove post_category from columns/values for new insert
-            //if (postCategoryIdx != -1)
-            //{
-                var p = (new PostCategoryInfo
-                {
-                    PostId = values[idIdx],
-                    PostCategory = values[postCategoryIdx]
-                });
-                columns.RemoveAt(postCategoryIdx);
-                values.RemoveAt(postCategoryIdx);
-            //}
-            // Add single quotes to all values
-            for (int i = 0; i < values.Count; i++)
-            {
-                if (!values[i].StartsWith("'"))
-                    values[i] = "'" + values[i].Trim('"', '\'') + "'";
-            }
-            // Rebuild the insert statement
-            p.NewInsert = $"INSERT INTO `wp_posts`({string.Join(", ", columns.Select(c => "`" + c + "`"))}) VALUES ({string.Join(",", values)});";
-        //}
-        return p;
+        return new PostCategoryInfo
+        {
+            NewInsert = line,
+            PostId = "",
+            PostCategory = ""
+        };
     }
 
+    
     public bool Separate(string sqlFilePath , string outputDirectory)
     {
 

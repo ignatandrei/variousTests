@@ -25,7 +25,7 @@ public class MySqlDatabaseRepo
         catch (Exception ex)
         {
             Console.WriteLine($"Error executing SQL command: {ex.Message}");
-            return false;
+            throw;
         }
     }
 
@@ -93,14 +93,29 @@ public class MySqlDatabaseRepo
 
     internal async Task ExecutePosts(string outputDirectory)
     {
+        var sep = new WordPressTableSeparator();
         var sqlCommand = Path.Combine(outputDirectory, "wp_posts.sql");
         if (File.Exists(sqlCommand))
         {
             var sql = File.ReadAllText(sqlCommand);
-            sql = "Delete from `wp_posts`;"+ Environment.NewLine + sql;
-            sql= sql.Replace("0000-00-00 00:00:00", "2099-01-01 01:01:01");
-            var result = await this.Execute(sql);
-            Console.WriteLine($"SQL Command {sqlCommand} executed successfully: {result}");
+            var result = await this.Execute("Delete from `wp_posts`;");
+            sql = sql.Replace("0000-00-00 00:00:00", "2099-01-01 01:01:01");
+            foreach (var line in sql.Split(Environment.NewLine))
+            {
+                var lineSql = sep.RewriteWpPostSql(line).NewInsert;
+
+                try
+                {
+                    result = await this.Execute(lineSql);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error executing line: \r\n {lineSql} \r\n from \r\n {line} \r\n. Exception: {ex.Message}");
+                    throw;
+                }
+
+            }
+            Console.WriteLine($"SQL Command {sqlCommand} executed successfully:");
         }
         else
         {

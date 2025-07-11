@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordPressData", "src\WordPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlTableSeparator", "src\SqlTableSeparator\SqlTableSeparator.csproj", "{AF59655A-4019-D38B-6454-94E9A4938382}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestVarious", "src\TestVarious\TestVarious.csproj", "{A2FD9BC6-C595-8A25-EF77-253EE8B2D820}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{AF59655A-4019-D38B-6454-94E9A4938382}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF59655A-4019-D38B-6454-94E9A4938382}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF59655A-4019-D38B-6454-94E9A4938382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2FD9BC6-C595-8A25-EF77-253EE8B2D820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2FD9BC6-C595-8A25-EF77-253EE8B2D820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2FD9BC6-C595-8A25-EF77-253EE8B2D820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2FD9BC6-C595-8A25-EF77-253EE8B2D820}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
