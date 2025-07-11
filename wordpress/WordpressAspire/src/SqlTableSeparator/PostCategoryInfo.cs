@@ -47,7 +47,7 @@ public class PostCategoryInfo
 
         for (int i = 0; i < values.Count; i++)
         {
-            var value = values[i].Trim('\'', '"');
+            var value = values[i].Trim('\'');
 
             switch (ColumnOrder[i])
             {
@@ -142,7 +142,7 @@ public class PostCategoryInfo
             {
                 inQuotes = true;
             }
-            if (value.EndsWith("'") )
+            if (value.EndsWith("'") && !value.EndsWith("\\'"))
             {
                 inQuotes = false;
             }

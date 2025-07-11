@@ -102,6 +102,10 @@ public class MySqlDatabaseRepo
             sql = sql.Replace("0000-00-00 00:00:00", "2099-01-01 01:01:01");
             foreach (var line in sql.Split(Environment.NewLine))
             {
+                if(string.IsNullOrWhiteSpace(line) || line.Trim().StartsWith("--") || line.Trim().StartsWith("#"))
+                {
+                    continue; // Skip empty lines and comments
+                }
                 var lineSql = ""; 
 
                 try

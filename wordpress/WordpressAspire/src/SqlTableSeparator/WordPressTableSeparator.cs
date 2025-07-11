@@ -16,6 +16,8 @@ public class WordPressTableSeparator
 
     public PostCategoryInfo RewriteWpPostSql(string line)
     {
+        if(string.IsNullOrWhiteSpace(line))
+            throw new ArgumentException("Insert statement cannot be null or empty", nameof(line));
         var pci=new PostCategoryInfo();
         var post = pci.ParseInsertStatement(line);
         var insert = "INSERT INTO `wp_posts`(";
@@ -27,11 +29,11 @@ public class WordPressTableSeparator
             "`guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) ";
         insert+="VALUES (";
         insert += $"{post.ID}, {post.PostAuthor}, '{post.PostDate.ToString("yyyy-MM-dd HH:mm:ss")}', '{post.PostDateGmt.ToString("yyyy-MM-dd HH:mm:ss")}', ";
-        insert += $"'{post.PostContent.Replace("'", "''")}', '{post.PostTitle.Replace("'", "''")}', '{post.PostExcerpt.Replace("'", "''")}', ";
+        insert += $"'{post.PostContent.Replace("'", "\'")}', '{post.PostTitle.Replace("'", "\'")}', '{post.PostExcerpt.Replace("'", "\'")}', ";
         insert += $"'{post.PostStatus}', '{post.CommentStatus}', '{post.PingStatus}', '{post.PostPassword}', ";
         insert += $"'{post.PostName}', '{post.ToPing}', '{post.Pinged}', '{post.PostModified.ToString("yyyy-MM-dd HH:mm:ss")}', ";
-        insert += $"'{post.PostModifiedGmt.ToString("yyyy-MM-dd HH:mm:ss")}', '{post.PostContentFiltered.Replace("'", "''")}', {post.PostParent}, ";
-        insert += $"'{post.Guid.Replace("'", "''")}', {post.MenuOrder}, '{post.PostType}', '{post.PostMimeType}', {post.CommentCount}";
+        insert += $"'{post.PostModifiedGmt.ToString("yyyy-MM-dd HH:mm:ss")}', '{post.PostContentFiltered.Replace("'", "\'")}', {post.PostParent}, ";
+        insert += $"'{post.Guid}', {post.MenuOrder}, '{post.PostType}', '{post.PostMimeType}', {post.CommentCount}";
         insert +=")";
         return new PostCategoryInfo
         {
