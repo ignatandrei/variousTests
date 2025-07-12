@@ -47,6 +47,24 @@ public class MySqlDatabaseRepo
     {
         await ExecutePosts(outputDirectory);
         await ExecuteTerms(outputDirectory);
+        await ExecuteComments(outputDirectory);
+    }
+
+    private async Task ExecuteComments(string outputDirectory)
+    {
+        var sqlCommand = Path.Combine(outputDirectory, "wp_comments.sql");
+        if (File.Exists(sqlCommand))
+        {
+            var sql = File.ReadAllText(sqlCommand);
+            sql = "Delete from `wp_comments`;" + Environment.NewLine + sql;
+            var result = await this.Execute(sql);
+            Console.WriteLine($"SQL Command {sqlCommand} executed successfully: {result}");
+        }
+        else
+        {
+            Console.WriteLine($"SQL file not found: {sqlCommand}");
+        }
+
     }
 
     private async Task ExecuteTerms(string outputDirectory)
