@@ -1,0 +1,236 @@
+
+This is about how I wanted to clean a C# solution of warnings.  The solution had a lot of warnings, and I wanted to remove them.  
+<br />
+I started with a simple prompt to remove all warnings, but that didn't work. <br /> The number of iterations were : 17
+<br />
+For the ones in a hurry ,this is the first and the last prompt 
+<br />
+<table border="1">
+    <tr>
+        <td><b>First</b></td>
+        <td><b>Last</b></td>
+
+    </tr>
+    <tr>
+        <td>Please clean and re-compile the project. Indentify all the warnings and make a prompt for each one to solve them . Display the results in tabular form</td>
+        <td>Please clean the solution.<br/>Compile the solution putting output into a file warnings.txt<br/>Identify all the warnings . Make a prompt designed for you to solve the warning<br/>The prompt should contain<br/>the file warnings.txt to identify where to find the warning<br/>the warning id<br/>detailed instruction about how to solve the warning.<br/>detailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .<br/>if it is only a warning per warning id, mention the whole path to the file and the line and the line number<br/>DO NOT summarize the warnings. List every warning with his prompt.<br/>The prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.<br/>Save in a tabular form (Columns: Number,Warning ID, Description,Count, Prompt , order by Count descending) in a HTML file and open it in an desktop browser</td>
+    </tr>
+</table>
+
+
+    <div>
+        <h2>Prompt 1 </h2>
+        <p><i>Please clean and re-compile the project. Indentify all the warnings and make a prompt for each one to solve them . Display the results in tabular form</i></p>
+    </div>
+    <div>
+        <h2>Prompt 2 </h2>
+        <p><i>Please clean and re-compile the project putting output into a file . Indentify all the warnings and make a prompt for each one to solve them . Display the results in tabular form</i></p>
+    </div>
+    <div>
+        <h2>Prompt 3 </h2>
+        <p><i>Please clean and re-compile the project putting output into a file . Indentify all the warnings and make a prompt for each one to solve them . Save the results in HTML  format into a html file.</i></p>
+    </div>
+    <div>
+        <h2>Prompt 4 </h2>
+        <p><i>Please clean and re-compile the project putting output into a file .
+Identify all the warnings and make a prompt for each one to solve them .
+Save in a tabular form in a HTML file and open it.</i></p>
+    </div>
+    <div>
+        <h2>Prompt 5 </h2>
+        <p><i>Please clean and re-compile the project putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve .
+Save in a tabular form  (Number,  Warning, Count, Prompt) in a HTML file and open it.</i></p>
+    </div>
+    <div>
+        <h2>Prompt 6 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve .
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it.</i></p>
+    </div>
+    <div>
+        <h2>Prompt 7 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve .
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it.</i></p>
+            <h4>The reader should figure why this answer is wrong</h4>
+            <ol style="list-style-type:upper-roman">
+                    <li><i>Answer</i> : <br />Reference: See warnings.txt for all occurrences.<br />How to fix: Remove the assignment if not needed, or use the variable if it should be used.<br />Warning ID: CS0219</li>
+            </ol>
+    </div>
+    <div>
+        <h2>Prompt 8 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve .
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again .
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it.</i></p>
+            <h4>The reader should figure why those generated answers are wrong</h4>
+            <ol style="list-style-type:upper-roman">
+                    <li><i>Answer</i> : <br />**Warning:** CS0219<br />**Location:** Check the warnings.txt file for specific occurrences<br />**How to solve:**<br />1. Research the specific warning code in Microsoft documentation<br />2. Apply the recommended fix from official sources<br />3. Update code according to best practices<br />4. Consider the context and impact of the change<br />**Verification:**<br />1. Run 'dotnet build' and verify the warning is resolved<br />2. Test functionality to ensure changes work correctly<br />3. Run full test suite if available<br />--modifications<br />#pragma warning disable CS0219 // Variables assigned but never used - kept for test configuration reference<br />const string clNumber = "100";<br />#pragma warning restore CS0219</li>
+                    <li><i>Answer</i> : <br />**Warning:** Field is never used<br />**Location:** Check the warnings.txt file for specific fields<br />**How to solve:**<br />1. Remove the unused field<br />2. If it's a logger, make sure it's being used for logging<br />3. If it's intended for future use, add a pragma directive to suppress<br />4. Consider if the field should be used somewhere<br />**Verification:**<br />1. Run 'dotnet build' and verify no CS0169 warnings<br />2. Test functionality to ensure removal doesn't break anything<br />3. Code review to confirm fields aren't needed</li>
+                    <li><i>Answer</i> : <br />Warning: Variable declared but never used<br />Location: Check the warnings.txt file for specific variables<br />How to solve:<br />Remove the unused variable declaration<br />If in a catch block, use '_' as discard variable: catch (Exception _)<br />If the variable is needed for debugging, use it or remove it<br />Consider using the variable if it serves a purpose<br />Verification:<br />Run 'dotnet build' and verify no CS0168 warnings<br />Test functionality to ensure removal doesn't break anything<br />Code review to confirm variables aren't actually needed</li>
+            </ol>
+    </div>
+    <div>
+        <h2>Prompt 9 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve .
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again .
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser</i></p>
+            <h4>The reader should figure why this answer is wrong</h4>
+            <ol style="list-style-type:upper-roman">
+                    <li><i>Answer</i> : <br />Warning Analysis: Duplicate using directive<br />How to solve:<br />1. Find files with duplicate using statements<br />2. Remove the duplicate using directive<br />3. Organize using statements alphabetically<br />4. Use IDE features like "Remove Unnecessary Usings" and "Sort Usings"<br />5. Configure EditorConfig to automatically organize usings<br />Verification:<br />1. Build the solution<br />2. Confirm CS0105 warnings are eliminated<br />3. Verify code compiles and runs correctly</li>
+            </ol>
+    </div>
+    <div>
+        <h2>Prompt 10 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve the warning
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again . Include cleaning the solution.
+The prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser</i></p>
+    </div>
+    <div>
+        <h2>Prompt 11 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve the warning
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again . Include cleaning the solution. Do not overwrite warnings.txt into the process .
+The prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser</i></p>
+            <h4>The reader should figure why this answer is wrong</h4>
+            <ol style="list-style-type:upper-roman">
+                    <li><i>Answer</i> : <br />File: warnings.txt Warning ID: CS0168 Instruction: Remove or use the declared variable in the relevant code file and line. Clean the solution and rebuild, then check warnings.txt to ensure CS0168 is resolved. Do not overwrite warnings.txt in the process.</li>
+            </ol>
+    </div>
+    <div>
+        <h2>Prompt 12 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve the warning
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .
+The prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser</i></p>
+            <h4>The reader should figure why this answer is wrong</h4>
+            <ol style="list-style-type:upper-roman">
+                    <li><i>Answer</i> : <br />for files with 1 warning, nu e necesar proimpt</li>
+            </ol>
+    </div>
+    <div>
+        <h2>Prompt 13 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve the warning
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .
+if it is only a warning per warning id, mention the whole path to the file and the line and the line number
+The prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser</i></p>
+            <h4>The reader should figure why this answer is wrong</h4>
+            <ol style="list-style-type:upper-roman">
+                    <li><i>Answer</i> : <br />Other CS Warnings Various other code warnings</li>
+            </ol>
+    </div>
+    <div>
+        <h2>Prompt 14 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve the warning
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .
+if it is only a warning per warning id, mention the whole path to the file and the line and the line number
+DO NOT summarize the warnings. List every warning with his prompt.
+The prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser</i></p>
+    </div>
+    <div>
+        <h2>Prompt 15 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve the warning
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .
+if it is only a warning per warning id, mention the whole path to the file and the line and the line number
+DO NOT summarize the warnings. List every warning with his prompt.
+The prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.
+Save in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser</i></p>
+            <h4>The reader should figure why this answer is wrong</h4>
+            <ol style="list-style-type:upper-roman">
+                    <li><i>Answer</i> : <br />Task: Fix platform-specific API warning CA1416<br />Warning File: warnings.txt<br />Warning ID: CA1416<br />Description: This call site is reachable on all platforms but API is only supported on specific platforms<br />Solution Instructions:<br />1. Add platform guards: if (OperatingSystem.IsWindows()) { /* Windows-specific code */ }<br />2. Use [SupportedOSPlatform("windows")] attribute on methods<br />3. Add conditional compilation: #if WINDOWS<br />4. Consider alternative cross-platform implementations<br />5. Document platform requirements clearly<br />Verification Instructions:<br />1. Clean the solution: dotnet clean<br />2. Build the solution: dotnet build > new_warnings.txt 2>&1<br />3. Search new_warnings.txt for "CA1416" to confirm warnings are resolved<br />4. Test on different platforms if possible<br />Example Files: Services.Infrastructure\Extensions\WebHostBuilderExtensions.cs(28,17)</li>
+            </ol>
+    </div>
+    <div>
+        <h2>Prompt 16 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve the warning
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .
+if it is only a warning per warning id, mention the whole path to the file and the line and the line number
+DO NOT summarize the warnings. List every warning with his prompt.
+The prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.
+Save in a tabular form (Number,Description, Warning, Count, Prompt) in a HTML file and open it in an desktop browser</i></p>
+            <h4>The reader should figure why those generated answers are wrong</h4>
+            <ol style="list-style-type:upper-roman">
+                    <li><i>Answer</i> : <br />Task: Resolve possible null reference argument warning CS8604.<br />Context: Review the complete build output in warnings.txt for context.<br />Warning Details:<br />- Warning ID: CS8604<br />- File: submodules\farm.configuration.core\Farm.Configuration.Core\Server\ConfigurationJSONCompiler.cs<br />- Line: 70, Column: 31<br />- Issue: Potentially null argument passed to non-nullable parameter<br />Resolution Steps:<br />1. Add null check before passing the argument<br />2. Use null-conditional operator (?.) if appropriate<br />3. Provide a default non-null value<br />4. Update method signature to accept nullable parameter if null is valid<br />Verification:<br />1. Clean the solution: dotnet clean FarmOrchestrator.sln<br />2. Rebuild: dotnet build FarmOrchestrator.sln > warnings_new.txt 2>&1<br />3. Verify CS8604 warning at line 70 is resolved in warnings_new.txt<br />4. Test the method with various inputs to ensure no null reference exceptions</li>
+                    <li><i>Answer</i> : <br />There are more CS8604 warnings</li>
+                    <li><i>Answer</i> : <br />Task: Resolve unreachable code warning CS0162.<br />Context: Review the complete build output in warnings.txt for context.<br />Warning Details:<br />- Warning ID: CS0162<br />- File: UsefulExtensions\src\UsefulExtensions\UsefulExtensions\ActionExtensions.cs<br />- Line: 19, Column: 55<br />- Issue: Code that can never be executed<br />Resolution Steps:<br />1. Examine the control flow to identify why code is unreachable<br />2. Remove the unreachable code if it's truly unnecessary<br />3. Fix the logic that prevents the code from being reached<br />4. Add conditional compilation directives if code is for specific builds<br />Verification:<br />1. Clean the solution: dotnet clean FarmOrchestrator.sln<br />2. Rebuild: dotnet build FarmOrchestrator.sln > warnings_new.txt 2>&1<br />3. Verify CS0162 warning at line 19 is resolved in warnings_new.txt<br />4. Test the method functionality to ensure expected behavior</li>
+            </ol>
+    </div>
+    <div>
+        <h2>Prompt 17 </h2>
+        <p><i>Please clean the solution.
+Compile the solution putting output into a file warnings.txt
+Identify all the warnings . Make a prompt designed for you to solve the warning
+The prompt should contain
+the file warnings.txt to identify where to find the warning
+the warning id
+detailed instruction about how to solve the warning.
+detailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .
+if it is only a warning per warning id, mention the whole path to the file and the line and the line number
+DO NOT summarize the warnings. List every warning with his prompt.
+The prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.
+Save in a tabular form (Columns: Number,Warning ID, Description,Count, Prompt , order by Count descending) in a HTML file and open it in an desktop browser</i></p>
+    </div>
+)

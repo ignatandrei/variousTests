@@ -1,0 +1,124 @@
+[
+  {
+    "Id": 1,
+    "Content": "Please clean and re-compile the project. Indentify all the warnings and make a prompt for each one to solve them . Display the results in tabular form",
+    "Intermezzos": [],
+    "LineNumber": 1
+  },
+  {
+    "Id": 2,
+    "Content": "Please clean and re-compile the project putting output into a file . Indentify all the warnings and make a prompt for each one to solve them . Display the results in tabular form",
+    "Intermezzos": [],
+    "LineNumber": 6
+  },
+  {
+    "Id": 3,
+    "Content": "Please clean and re-compile the project putting output into a file . Indentify all the warnings and make a prompt for each one to solve them . Save the results in HTML  format into a html file.",
+    "Intermezzos": [],
+    "LineNumber": 9
+  },
+  {
+    "Id": 4,
+    "Content": "Please clean and re-compile the project putting output into a file .\r\nIdentify all the warnings and make a prompt for each one to solve them .\r\nSave in a tabular form in a HTML file and open it.",
+    "Intermezzos": [],
+    "LineNumber": 12
+  },
+  {
+    "Id": 5,
+    "Content": "Please clean and re-compile the project putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve .\r\nSave in a tabular form  (Number,  Warning, Count, Prompt) in a HTML file and open it.",
+    "Intermezzos": [],
+    "LineNumber": 18
+  },
+  {
+    "Id": 6,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve .\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it.",
+    "Intermezzos": [],
+    "LineNumber": 28
+  },
+  {
+    "Id": 7,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve .\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it.",
+    "Intermezzos": [
+      "Reference: See warnings.txt for all occurrences.\r\nHow to fix: Remove the assignment if not needed, or use the variable if it should be used.\r\nWarning ID: CS0219"
+    ],
+    "LineNumber": 35
+  },
+  {
+    "Id": 8,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve .\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again .\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it.",
+    "Intermezzos": [
+      "**Warning:** CS0219\r\n**Location:** Check the warnings.txt file for specific occurrences\r\n**How to solve:**\r\n1. Research the specific warning code in Microsoft documentation\r\n2. Apply the recommended fix from official sources\r\n3. Update code according to best practices\r\n4. Consider the context and impact of the change\r\n**Verification:**\r\n1. Run \u0027dotnet build\u0027 and verify the warning is resolved\r\n2. Test functionality to ensure changes work correctly\r\n3. Run full test suite if available\r\n--modifications\r\n#pragma warning disable CS0219 // Variables assigned but never used - kept for test configuration reference\r\nconst string clNumber = \u0022100\u0022;\r\n#pragma warning restore CS0219",
+      "**Warning:** Field is never used\r\n**Location:** Check the warnings.txt file for specific fields\r\n**How to solve:**\r\n1. Remove the unused field\r\n2. If it\u0027s a logger, make sure it\u0027s being used for logging\r\n3. If it\u0027s intended for future use, add a pragma directive to suppress\r\n4. Consider if the field should be used somewhere\r\n**Verification:**\r\n1. Run \u0027dotnet build\u0027 and verify no CS0169 warnings\r\n2. Test functionality to ensure removal doesn\u0027t break anything\r\n3. Code review to confirm fields aren\u0027t needed",
+      "Warning: Variable declared but never used\r\nLocation: Check the warnings.txt file for specific variables\r\nHow to solve:\r\nRemove the unused variable declaration\r\nIf in a catch block, use \u0027_\u0027 as discard variable: catch (Exception _)\r\nIf the variable is needed for debugging, use it or remove it\r\nConsider using the variable if it serves a purpose\r\nVerification:\r\nRun \u0027dotnet build\u0027 and verify no CS0168 warnings\r\nTest functionality to ensure removal doesn\u0027t break anything\r\nCode review to confirm variables aren\u0027t actually needed"
+    ],
+    "LineNumber": 54
+  },
+  {
+    "Id": 9,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve .\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again .\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser",
+    "Intermezzos": [
+      "Warning Analysis: Duplicate using directive\r\nHow to solve:\r\n1. Find files with duplicate using statements\r\n2. Remove the duplicate using directive\r\n3. Organize using statements alphabetically\r\n4. Use IDE features like \u0022Remove Unnecessary Usings\u0022 and \u0022Sort Usings\u0022\r\n5. Configure EditorConfig to automatically organize usings\r\nVerification:\r\n1. Build the solution\r\n2. Confirm CS0105 warnings are eliminated\r\n3. Verify code compiles and runs correctly"
+    ],
+    "LineNumber": 115
+  },
+  {
+    "Id": 10,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve the warning\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again . Include cleaning the solution.\r\nThe prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser",
+    "Intermezzos": [],
+    "LineNumber": 146
+  },
+  {
+    "Id": 11,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve the warning\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again . Include cleaning the solution. Do not overwrite warnings.txt into the process .\r\nThe prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser",
+    "Intermezzos": [
+      "File: warnings.txt Warning ID: CS0168 Instruction: Remove or use the declared variable in the relevant code file and line. Clean the solution and rebuild, then check warnings.txt to ensure CS0168 is resolved. Do not overwrite warnings.txt in the process."
+    ],
+    "LineNumber": 160
+  },
+  {
+    "Id": 12,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve the warning\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .\r\nThe prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser",
+    "Intermezzos": [
+      "for files with 1 warning, nu e necesar proimpt"
+    ],
+    "LineNumber": 177
+  },
+  {
+    "Id": 13,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve the warning\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .\r\nif it is only a warning per warning id, mention the whole path to the file and the line and the line number\r\nThe prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser",
+    "Intermezzos": [
+      "Other CS Warnings Various other code warnings"
+    ],
+    "LineNumber": 194
+  },
+  {
+    "Id": 14,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve the warning\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .\r\nif it is only a warning per warning id, mention the whole path to the file and the line and the line number\r\nDO NOT summarize the warnings. List every warning with his prompt.\r\nThe prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser",
+    "Intermezzos": [],
+    "LineNumber": 216
+  },
+  {
+    "Id": 15,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve the warning\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .\r\nif it is only a warning per warning id, mention the whole path to the file and the line and the line number\r\nDO NOT summarize the warnings. List every warning with his prompt.\r\nThe prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.\r\nSave in a tabular form (Number, Warning, Count, Prompt) in a HTML file and open it in an desktop browser",
+    "Intermezzos": [
+      "Task: Fix platform-specific API warning CA1416\r\nWarning File: warnings.txt\r\nWarning ID: CA1416\r\nDescription: This call site is reachable on all platforms but API is only supported on specific platforms\r\nSolution Instructions:\r\n1. Add platform guards: if (OperatingSystem.IsWindows()) { /* Windows-specific code */ }\r\n2. Use [SupportedOSPlatform(\u0022windows\u0022)] attribute on methods\r\n3. Add conditional compilation: #if WINDOWS\r\n4. Consider alternative cross-platform implementations\r\n5. Document platform requirements clearly\r\nVerification Instructions:\r\n1. Clean the solution: dotnet clean\r\n2. Build the solution: dotnet build \u003E new_warnings.txt 2\u003E\u00261\r\n3. Search new_warnings.txt for \u0022CA1416\u0022 to confirm warnings are resolved\r\n4. Test on different platforms if possible\r\nExample Files: Services.Infrastructure\\Extensions\\WebHostBuilderExtensions.cs(28,17)"
+    ],
+    "LineNumber": 236
+  },
+  {
+    "Id": 16,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve the warning\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .\r\nif it is only a warning per warning id, mention the whole path to the file and the line and the line number\r\nDO NOT summarize the warnings. List every warning with his prompt.\r\nThe prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.\r\nSave in a tabular form (Number,Description, Warning, Count, Prompt) in a HTML file and open it in an desktop browser",
+    "Intermezzos": [
+      "Task: Resolve possible null reference argument warning CS8604.\r\nContext: Review the complete build output in warnings.txt for context.\r\nWarning Details:\r\n- Warning ID: CS8604\r\n- File: submodules\\farm.configuration.core\\Farm.Configuration.Core\\Server\\ConfigurationJSONCompiler.cs\r\n- Line: 70, Column: 31\r\n- Issue: Potentially null argument passed to non-nullable parameter\r\nResolution Steps:\r\n1. Add null check before passing the argument\r\n2. Use null-conditional operator (?.) if appropriate\r\n3. Provide a default non-null value\r\n4. Update method signature to accept nullable parameter if null is valid\r\nVerification:\r\n1. Clean the solution: dotnet clean FarmOrchestrator.sln\r\n2. Rebuild: dotnet build FarmOrchestrator.sln \u003E warnings_new.txt 2\u003E\u00261\r\n3. Verify CS8604 warning at line 70 is resolved in warnings_new.txt\r\n4. Test the method with various inputs to ensure no null reference exceptions",
+      "There are more CS8604 warnings",
+      "Task: Resolve unreachable code warning CS0162.\r\nContext: Review the complete build output in warnings.txt for context.\r\nWarning Details:\r\n- Warning ID: CS0162\r\n- File: UsefulExtensions\\src\\UsefulExtensions\\UsefulExtensions\\ActionExtensions.cs\r\n- Line: 19, Column: 55\r\n- Issue: Code that can never be executed\r\nResolution Steps:\r\n1. Examine the control flow to identify why code is unreachable\r\n2. Remove the unreachable code if it\u0027s truly unnecessary\r\n3. Fix the logic that prevents the code from being reached\r\n4. Add conditional compilation directives if code is for specific builds\r\nVerification:\r\n1. Clean the solution: dotnet clean FarmOrchestrator.sln\r\n2. Rebuild: dotnet build FarmOrchestrator.sln \u003E warnings_new.txt 2\u003E\u00261\r\n3. Verify CS0162 warning at line 19 is resolved in warnings_new.txt\r\n4. Test the method functionality to ensure expected behavior"
+    ],
+    "LineNumber": 277
+  },
+  {
+    "Id": 17,
+    "Content": "Please clean the solution.\r\nCompile the solution putting output into a file warnings.txt\r\nIdentify all the warnings . Make a prompt designed for you to solve the warning\r\nThe prompt should contain\r\nthe file warnings.txt to identify where to find the warning\r\nthe warning id\r\ndetailed instruction about how to solve the warning.\r\ndetailed instruction about how to verify that the warning does not appear again .  Include cleaning the solution.Put the new warnings into a new file. Do not overwrite warnings.txt into the process .\r\nif it is only a warning per warning id, mention the whole path to the file and the line and the line number\r\nDO NOT summarize the warnings. List every warning with his prompt.\r\nThe prompt MUST not be in HTML nice form, but in a proper way to be copied as LLM instruction.\r\nSave in a tabular form (Columns: Number,Warning ID, Description,Count, Prompt , order by Count descending) in a HTML file and open it in an desktop browser",
+    "Intermezzos": [],
+    "LineNumber": 349
+  }
+]

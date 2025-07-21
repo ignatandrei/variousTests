@@ -1,0 +1,43 @@
+@using WarningParser.Models;
+@inherits RazorBlade.HtmlTemplate<List<PromptData>>;
+
+This is about how I wanted to clean a C# solution of warnings.  The solution had a lot of warnings, and I wanted to remove them.  
+<br />
+I started with a simple prompt to remove all warnings, but that didn't work. <br /> The number of iterations were : @Model.Count
+<br />
+For the ones in a hurry ,this is the first and the last prompt 
+<br />
+<table border="1">
+    <tr>
+        <td><b>First</b></td>
+        <td><b>Last</b></td>
+
+    </tr>
+    <tr>
+        <td>@Html.Raw(@Model.First().Content.Replace("\r\n","<br/>"))</td>
+        <td>@Html.Raw(@Model.Last().Content.Replace("\r\n", "<br/>"))</td>
+    </tr>
+</table>
+
+
+@foreach(var prompt in Model)
+{
+    <div>
+        <h2>Prompt @prompt.Id </h2>
+        <p><i>@prompt.Content</i></p>
+        @{
+            var nrIntermezzo = prompt.Intermezzos.Count();
+        }
+        @if (nrIntermezzo>0)
+        {
+            <h4>The reader should figure why @(nrIntermezzo>1?"those generated answers are wrong":"this answer is wrong")</h4>
+            <ol style="list-style-type:upper-roman">
+                @foreach (var intermezzo in prompt.Intermezzos)
+                {
+                    <li><i>Answer</i> : <br />@Html.Raw(intermezzo.Replace("\r\n", "<br />"))</li>
+                }
+            </ol>
+        }
+    </div>
+}
+)
