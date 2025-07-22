@@ -1,0 +1,21 @@
+@inherits RazorBlade.PlainTextTemplate<ChatExportParser.ChatExport>
+@{
+    var conversations = ChatParser.ExtractConversations(Model);
+    int convNr = 0;
+}   
+    @foreach(var conv in conversations)
+    {
+    convNr++;
+        <text>
+        <div class="conversation">
+            <h1 title="@(conv.RequestId)">Request/Response number @convNr </h1>
+           </div>
+        <table>
+            <thead><tr><th>User</th><th>AI</th><th>Comments</th></thead>
+                <tbody>
+                <tr><td valign="top">@conv.UserQuestion </td><td>@conv.AiResponse.Replace("\n", "\n<br/>")</td><td>...</td></tr>
+            </tbody>
+        </table>
+        </text>
+    }
+}
