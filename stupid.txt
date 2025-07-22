@@ -1,0 +1,22 @@
+--fridayLinks1
+ErrorOnVersionOf System.Xml.Linq
+Waiting for 5 minutes to finish refactoring
+
+--fridayLinks2
+TWICE!
+// NOTE: The actual .wpost format used by OpenLive Writer uses Microsoft's Structured Storage
+// (COM-based compound document format), which requires additional references and is complex to implement.
+// 
+// For this demo, we'll create a simplified XML format that mimics the structure
+// but saves it with the .wpost extension. A full implementation would require:
+// 1. Microsoft.Office.Interop.Word or similar COM references
+// 2. Implementation of the full compound document structure with multiple streams
+// 3. Proper handling of supporting files (images, etc.)
+//
+// The real OpenLive Writer format stores data in multiple streams within a compound document:
+// - "DestinationBlogId" stream
+// - "Id" stream  
+// - "Title" stream
+// - "Contents" stream (UTF-8 encoded)
+// - "SupportingFiles" storage with sub-streams for images/files
+// - Various other metadata streams
