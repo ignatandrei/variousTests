@@ -48,7 +48,7 @@ public class BlogPost
         var filePath = Path.Combine(draftsFolder, fileName);
         
         Console.WriteLine("Creating hardcoded blog post...");
-        OpenLiveWriterPostGenerator.SavePost(post, filePath);
+        OpenLiveWriterPostGenerator.SavePost(post, filePath); 
         
         Console.WriteLine($"\nBlog post saved successfully!");
         

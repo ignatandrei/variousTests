@@ -1,6 +1,8 @@
+using OpenLiveWriter.CoreServices;
 using OpenLiveWriter.Extensibility.BlogClient;
 using OpenLiveWriter.Interop.Com.StructuredStorage;
 using OpenLiveWriter.PostEditor;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Linq;
@@ -99,6 +101,11 @@ public class OpenLiveWriterPostGenerator
 
     private static void SavePostAsStructuredStorage(BlogPost post, string filePath)
     {
+        ApplicationEnvironment.Initialize(Assembly.GetExecutingAssembly(),
+                        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"\Windows Live\Writer\"));
+
+        PostEditorFile.Initialize();
+
         PostEditorFile pef = PostEditorFile.CreateNew( new DirectoryInfo(Path.GetDirectoryName(filePath!)!));
         var bef= new BlogPostEditingContext(post.Id, post)  ;
         pef.SaveBlogPost(bef);
