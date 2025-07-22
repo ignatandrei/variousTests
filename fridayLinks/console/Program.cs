@@ -1,3 +1,4 @@
+using OpenLiveWriter.Extensibility.BlogClient;
 using OpenLiveWriterPostCreator;
 
 class Program
@@ -11,9 +12,7 @@ class Program
         var post = new BlogPost
         {
             Title = "My Awesome Blog Post",
-            BlogName = "Tech Adventures",
-            Author = "John Developer",
-            Content = @"<h2>Welcome to My Blog</h2>
+            Contents = @"<h2>Welcome to My Blog</h2>
 <p>This is a sample blog post created programmatically using C#.</p>
 
 <h3>Key Features</h3>
@@ -40,11 +39,7 @@ public class BlogPost
 </blockquote>
 
 <p>Happy coding! 🚀</p>",
-            Excerpt = "A sample blog post demonstrating programmatic content creation with C# and OpenLive Writer integration.",
-            Categories = { "Programming", "C#", "Blogging" },
-            Tags = { "csharp", "openlivewriter", "blogging", "programming", "tutorial" },
-            IsDraft = false,
-            CreatedDate = DateTime.Now
+            //Categories = [ "Programming", "C#", "Blogging" ],
         };
         
         // Save the post
@@ -58,12 +53,8 @@ public class BlogPost
         Console.WriteLine($"\nBlog post saved successfully!");
         
         Console.WriteLine($"File: {filePath}");
-        Console.WriteLine($"Post ID: {post.PostId}");
-        Console.WriteLine($"Blog ID: {post.BlogId}");
+        Console.WriteLine($"Post ID: {post.Id}");
         
-        // Verify GUID formats
-        Console.WriteLine($"Blog ID format check: {(post.BlogId.Length == 36 && post.BlogId.Count(c => c == '-') == 4 ? "✓ Valid" : "✗ Invalid")}");
-        Console.WriteLine($"Post ID format check: {(post.PostId.Length == 36 && post.PostId.Count(c => c == '-') == 4 ? "✓ Valid" : "✗ Invalid")}");
         
         // Verify that the saved file is a valid compound document
         Console.WriteLine("\nVerifying saved file...");
@@ -79,11 +70,11 @@ public class BlogPost
                 Console.WriteLine($"✓ File size: {fileBytes.Length} bytes");
                 
                 // Check if BlogId is a valid GUID
-                if (Guid.TryParse(post.BlogId, out Guid blogGuid))
+                if (Guid.TryParse(post.Id, out Guid blogGuid))
                 {
                     Console.WriteLine($"✓ BlogId is a valid GUID: {blogGuid}");
                 }
-                else
+                else 
                 {
                     Console.WriteLine("✗ BlogId is NOT a valid GUID format");
                 }
