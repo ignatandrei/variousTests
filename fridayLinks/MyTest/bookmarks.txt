@@ -1,0 +1,188 @@
+﻿<OL>
+<li><a href="https://refactoringenglish.com/chapters/write-blog-posts-developers-read/#accommodate-skimmers" target="_blank">How to Write Blog Posts that Developers Read · Refactoring English</a></li>
+<li><a href="https://swizec.com/blog/you-cant-side-quest-a-product/" target="_blank">You can't side-quest a product | Swizec Teller</a></li>
+<li><a href="https://qz.com/most-expensive-desserts-world-ice-cream-cookies-1851773121" target="_blank">What are the most expensive desserts in the world?</a></li>
+<li><a href="https://hardcoresoftware.learningbyshipping.com/p/230-mcp-its-hot-but-will-it-win" target="_blank">(9) 230. MCP - It's Hot, But Will It Win?</a></li>
+<li><a href="https://creatoreconomy.so/p/an-opinionated-guide-on-which-ai-model-2025" target="_blank">(9) An Opinionated Guide on Which AI Model to Use in 2025</a></li>
+<li><a href="https://www.nouvelobs.com/bibliobs/20250316.OBS101513/le-prix-goncourt-herve-le-tellier-s-est-mesure-a-l-ia-et-le-match-a-ete-a-la-fois-surprenant-et-terrifiant.html" target="_blank">Le prix Goncourt Hervé Le Tellier s’est mesuré à l’IA et le match a été à la fois surprenant… et terrifiant</a></li>
+<li><a href="https://effect.website/docs/getting-started/creating-effects/" target="_blank">Creating Effects | Effect Documentation</a></li>
+<li><a href="chrome://newtab/" target="_blank">New Tab</a></li>
+<li><a href="https://github.blog/open-source/maintainers/5-github-actions-every-maintainer-needs-to-know/" target="_blank">5 GitHub Actions every maintainer needs to know - The GitHub Blog</a></li>
+<li><a href="https://github.com/xoofx/ultra" target="_blank">xoofx/ultra: An advanced profiler for .NET Applications on Windows</a></li>
+</OL>
+<OL>
+<li><a href="https://www.joshuakgoldberg.com/blog/try-catch-as-little-as-possible/" target="_blank">Try...Catch As Little As Possible | Goldblog</a></li>
+<li><a href="https://evilmartians.com/chronicles/railing-against-time-tools-and-techniques-that-got-us-5x-faster-results" target="_blank">Railing against time: tools and techniques that got us 5X faster tests—Martian Chronicles, Evil Martians’ team blog</a></li>
+<li><a href="https://www.svix.com/blog/webhooks-are-harder-than-they-seem/" target="_blank">Webhooks Are Harder Than They Seem</a></li>
+<li><a href="https://philbooth.me/blog/six-ways-to-shoot-yourself-in-the-foot-with-healthchecks" target="_blank">Six ways to shoot yourself in the foot with healthchecks</a></li>
+<li><a href="https://alexwlchan.net/2024/scheduled-screenshots/" target="_blank">Taking regular screenshots of my website – alexwlchan</a></li>
+<li><a href="https://lukaspetr.com/15-lessons-from-15-years-of-indie-app-development/" target="_blank">15 Lessons From 15 Years of Indie App Development</a></li>
+<li><a href="https://stackoverflow.blog/2024/12/05/four-approaches-to-creating-a-specialized-llm/" target="_blank">Four approaches to creating a specialized LLM - Stack Overflow</a></li>
+<li><a href="https://sergeyteplyakov.github.io/Blog/csharp/2024/12/10/StackOverflow_vs_OutOfMemoryException.html" target="_blank">StackOverflowException vs. OutOfMemoryException | Dissecting the Code</a></li>
+<li><a href="https://jvns.ca/blog/2024/11/26/terminal-rules/" target="_blank">"Rules" that terminal programs follow</a></li>
+<li><a href="https://clig.dev/#analytics" target="_blank">Command Line Interface Guidelines</a></li>
+</OL>
+<OL>
+<li><a href="https://termo.rajnandan.com/" target="_blank">Termo - An Easy to use terminal for your browser</a></li>
+<li><a href="https://blog.meetbrackets.com/architectures-of-modern-front-end-applications-8859dfe6c12e" target="_blank">Architectures of modern Front-end applications | Medium | BRACKETS</a></li>
+<li><a href="https://www.sahilbloom.com/newsletter/the-most-powerful-life-hacks-ive-found" target="_blank">The Most Powerful Life Hacks I've Found | The Curiosity Chronicle</a></li>
+<li><a href="https://goatreview.com/understanding-ambient-context-pattern-net/" target="_blank">Understanding the Ambient Context Pattern in .NET: From Theory to Production</a></li>
+<li><a href="https://github.com/anvaka/map-of-github" target="_blank">anvaka/map-of-github: Inspirational Mapping</a></li>
+<li><a href="https://blog.greglow.com/2020/04/17/sql-why-i-prefer-sequences-to-identity-columns/" target="_blank">SQL: Why I prefer sequences to IDENTITY columns - The Bit Bucket</a></li>
+<li><a href="https://devblogs.microsoft.com/dotnet/vector-data-qdrant-ai-search-dotnet/" target="_blank">Exploring Microsoft.Extensions.VectorData with Qdrant and Azure AI Search - .NET Blog</a></li>
+<li><a href="https://coauthor.studio/sign-in?return_to=%2Frewind%2Fo6PqQA" target="_blank">Coauthor | Transform Ideas Into Influential Content</a></li>
+<li><a href="https://sancho.dev/blog/cram-tests-a-hidden-gem-of-dune" target="_blank">Cram tests: dune's hidden gem | sancho.dev</a></li>
+<li><a href="https://github.com/donnemartin/system-design-primer" target="_blank">donnemartin/system-design-primer: Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.</a></li>
+</OL>
+<OL>
+<li><a href="https://medium.com/booking-com-development/modernizing-a-legacy-endpoint-and-why-its-worth-it-a-step-by-step-guide-085d92b419a3" target="_blank">Modernizing a Legacy Endpoint and Why It’s Worth It: a Step-by-Step Guide | by Poorvi Sharma | Booking.com Engineering | Medium</a></li>
+<li><a href="https://www.workingsoftware.dev/fundamental-techniques-for-software-architects/?&aid=recJPFzgkC3jgOpfe&_bhlid=49be9321cfdcd094079855902469e994055bbadd" target="_blank">29 Fundamental Techniques for Software Architects</a></li>
+<li><a href="https://www.datacamp.com/tutorial/fine-tuning-llama-3-2" target="_blank">Fine-tuning Llama 3.2 and Using It Locally: A Step-by-Step Guide | DataCamp</a></li>
+<li><a href="https://nestenius.se/net/additionalauthorizationparameters-in-asp-net-core-9/" target="_blank">AdditionalAuthorizationParameters in ASP.NET Core 9</a></li>
+<li><a href="https://gamlor.info/posts-output/2024-12-11-csharp-testing-stuff/en/" target="_blank">Gamlor's Blog: More Testing Tips With C#</a></li>
+<li><a href="https://chessengines.super.site/" target="_blank">Chess Engines: A Zero to One Guide</a></li>
+<li><a href="https://www.workingsoftware.dev/fundamental-techniques-for-software-architects/" target="_blank">29 Fundamental Techniques for Software Architects</a></li>
+<li><a href="https://blog.codepipes.com/testing/software-testing-antipatterns.html" target="_blank">Software Testing Anti-patterns · Codepipes Blog</a></li>
+<li><a href="https://www.tpeczek.com/2021/12/aspnet-core-6-and-iasyncenumerable.html" target="_blank">ASP.NET Core 6 and IAsyncEnumerable - Receiving Async Streamed JSON in Blazor WebAssembly</a></li>
+<li><a href="https://blog.nimblepros.com/blogs/csharp-in-parameter-keyword/" target="_blank">Using 'in' C# Keyword as a Parameter Modifier | NimblePros Blog</a></li>
+</OL>
+<OL>
+<li><a href="https://adamgrant.substack.com/p/the-11-new-books-to-brighten-your" target="_blank">The 11 New Books to Brighten Your Spring - by Adam Grant</a></li>
+<li><a href="https://newsletter.posthog.com/p/50-things-weve-learned-about-building" target="_blank">50 things we’ve learned about building successful products</a></li>
+<li><a href="https://2ality.com/2025/03/typescript-sales-pitch.html" target="_blank">My sales pitch for TypeScript</a></li>
+<li><a href="https://sergeyteplyakov.github.io/Blog/csharp/2025/01/28/The_Dangers_Of_Async_Void.html" target="_blank">The Dangers of Async Void | Dissecting the Code</a></li>
+<li><a href="https://simonwillison.net/2025/Mar/11/using-llms-for-code/" target="_blank">Here’s how I use LLMs to help me write code</a></li>
+<li><a href="https://plantuml.com/starting" target="_blank">Quick Start Guide</a></li>
+<li><a href="https://github.com/metorial/mcp-containers" target="_blank">metorial/mcp-containers: Containerized versions of hundreds of MCP servers 📡 🧠</a></li>
+<li><a href="https://hardcoresoftware.learningbyshipping.com/p/225-systems-ideas-that-sound-good" target="_blank">(9) 225. Systems Ideas that Sound Good But Almost Never Work—"Let's just…"</a></li>
+<li><a href="https://timdeschryver.dev/blog/integrating-yarp-within-dotnet-aspire?utm_source=bonobopress&utm_medium=newsletter&utm_campaign=2048" target="_blank">Using YARP as BFF within .NET Aspire: Integrating YARP into .NET Aspire</a></li>
+<li><a href="https://block.github.io/goose/blog/2025/04/10/visual-guide-mcp/" target="_blank">A Visual Guide To MCP Ecosystem | codename goose</a></li>
+</OL>
+<OL>
+<li><a href="https://newatlas.com/computers/smartphone-listening-conversations-ads-facebook/?utm_source=bonobopress&utm_medium=newsletter&utm_campaign=2050" target="_blank">Facebook isn’t eavesdropping, but the truth is more disturbing</a></li>
+<li><a href="https://idiallo.com/blog/zipbomb-protection" target="_blank">I use Zip Bombs to Protect my Server</a></li>
+<li><a href="https://gsap.com/resources/Wordpress/" target="_blank">Wordpress | GSAP | Docs & Learning</a></li>
+<li><a href="https://pglite.dev/docs/" target="_blank">Getting started with PGlite | PGlite</a></li>
+<li><a href="https://antirez.com/news/151" target="_blank">Redis is open source again - <antirez></a></li>
+<li><a href="https://www.kdnuggets.com/step-by-step-linkedin-profile-optimisation-to-land-a-job" target="_blank">Step-by-Step LinkedIn Profile Optimisation to Land a Job - KDnuggets</a></li>
+<li><a href="https://laurentkempe.com/2025/04/05/sse-powered-mcp-server-with-csharp-and-dotnet-in-157mb-executable/" target="_blank">Laurent Kempé - SSE-Powered MCP Server with C# and .NET in 15.7MB executable</a></li>
+<li><a href="https://github.com/mockoon/mockoon" target="_blank">mockoon/mockoon: Mockoon is the easiest and quickest way to run mock APIs locally. No remote deployment, no account required, open source.</a></li>
+<li><a href="https://antfu.me/posts/categorize-deps" target="_blank">Categorize Your Dependencies</a></li>
+<li><a href="https://metalama.net/blog/metalama-open-source" target="_blank">Metalama Is Now Open Source, Adding Full Meta-Programming to C# · Metalama Blog</a></li>
+</OL>
+<OL>
+<li><a href="https://thoughtbot.com/blog/falsehoods-software-teams-believe-about-user-feedback" target="_blank">Falsehoods software teams believe about user feedback</a></li>
+<li><a href="https://github.com/NSG650/LinuxInExcel" target="_blank">NSG650/LinuxInExcel</a></li>
+<li><a href="https://dora.dev/capabilities/" target="_blank">DORA | Capabilities</a></li>
+<li><a href="https://www.seangoedecke.com/getting-things-done/" target="_blank">Getting things "done" in large tech companies | sean goedecke</a></li>
+<li><a href="https://ricomariani.medium.com/fifty-years-of-microsoft-developer-tools-72584eead4b7" target="_blank">Fifty Years of Microsoft Developer Tools | by Rico Mariani | Apr, 2025 | Medium</a></li>
+<li><a href="https://jhm.fyi/p/playbook-for-effective-11s" target="_blank">(9) Playbook for Effective 1:1s - by Josh - Vision and Values</a></li>
+<li><a href="https://www.code4it.dev/architecture-notes/retry-patterns-jitter/" target="_blank">Harnessing the Power of Jitter: Enhancing Retry Patterns with a bit of randomness | Code4IT</a></li>
+<li><a href="https://www.templatesbypaul.com/" target="_blank">Home</a></li>
+<li><a href="https://github.com/marcboeker/gmail-to-sqlite" target="_blank">marcboeker/gmail-to-sqlite: Index your Gmail account to a SQLite DB and play with the data.</a></li>
+<li><a href="https://raz.sh/blog/2025-05-02_a_critical_look_at_mcp?utm_source=changelog-news" target="_blank">A Critical Look at MCP- Raz Blog</a></li>
+</OL>
+<OL>
+<li><a href="https://opensourcemaintenancefee.org/consumers/" target="_blank">What is the Open Source Maintenance Fee? | Open Source Maintenance Fee</a></li>
+<li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank">Prompt engineering overview - Anthropic</a></li>
+<li><a href="https://cookbook.openai.com/examples/gpt4-1_prompting_guide" target="_blank">GPT-4.1 Prompting Guide | OpenAI Cookbook</a></li>
+<li><a href="https://ai.google.dev/gemini-api/docs/prompting-strategies" target="_blank">Prompt design strategies  |  Gemini API  |  Google AI for Developers</a></li>
+<li><a href="https://github.com/referefref/OpenAIPot" target="_blank">referefref/OpenAIPot: An OpenAI API Compatible Honeypot Gateway</a></li>
+<li><a href="https://vvvincent.me/llms-are-making-me-dumber/" target="_blank">LLMs are Making Me Dumber - Vincent Cheng</a></li>
+<li><a href="https://github.com/microsoft/WSL" target="_blank">microsoft/WSL: Windows Subsystem for Linux</a></li>
+<li><a href="https://github.com/rybbit-io/rybbit" target="_blank">rybbit-io/rybbit: 🐸 Rybbit - open-source and privacy-friendly alternative to Google Analytics that is 10x more intuitive.</a></li>
+<li><a href="https://www.workingsoftware.dev/patricks-technology-radar/" target="_blank">Patrick's Technology Radar</a></li>
+<li><a href="https://www.workingsoftware.dev/introducing-the-software-architecture-decision-canvas/" target="_blank">Introduction to the Architecture Decision Canvas: Making better architecture decisions together</a></li>
+</OL>
+<OL>
+<li><a href="https://ithy.com/" target="_blank">Ithy</a></li>
+<li><a href="https://neuecc.medium.com/zlinq-a-zero-allocation-linq-library-for-net-1bb0a3e5c749" target="_blank">“ZLinq”, a Zero-Allocation LINQ Library for .NET | by Yoshifumi Kawai | May, 2025 | Medium</a></li>
+<li><a href="https://github.com/Cysharp/ZLinq" target="_blank">Cysharp/ZLinq: Zero allocation LINQ with LINQ to Span, LINQ to SIMD, and LINQ to Tree (FileSystem, JSON, GameObject, etc.) for all .NET platforms and Unity, Godot.</a></li>
+<li><a href="https://github.com/public-apis/public-apis" target="_blank">public-apis/public-apis: A collective list of free APIs</a></li>
+<li><a href="https://steven-giesel.com/blogPost/53691229-fbb1-48cf-95e5-f586f9800ee1" target="_blank">Avoiding reflection in C# in way unsafer ways!</a></li>
+<li><a href="https://andrewlock.net/converting-a-docker-compose-file-to-aspire/" target="_blank">Converting a docker-compose file to .NET Aspire</a></li>
+<li><a href="https://listmonk.app/" target="_blank">listmonk - Free and open source self-hosted newsletter, mailing list manager, and transactional mails</a></li>
+<li><a href="https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-multi-agent-orchestration/" target="_blank">Semantic Kernel: Multi-agent Orchestration | Semantic Kernel</a></li>
+<li><a href="https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-agents-are-now-generally-available/" target="_blank">Semantic Kernel Agents are now Generally Available | Semantic Kernel</a></li>
+<li><a href="https://llm.datasette.io/en/stable/index.html" target="_blank">LLM: A CLI utility and Python library for interacting with Large Language Models</a></li>
+</OL>
+<OL>
+<li><a href="https://vexlio.com/blog/five-simple-things-that-will-immediately-improve-your-diagrams/" target="_blank">Five simple things that will immediately improve your diagrams</a></li>
+<li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices" target="_blank">Claude 4 prompt engineering best practices - Anthropic</a></li>
+<li><a href="https://microsoft.github.io/autogen/dotnet/dev/core/tutorial.html" target="_blank">Tutorial | AutoGen .NET</a></li>
+<li><a href="https://medium.com/se4humans/the-i-have-your-back-engineering-team-that-delivers-9331db1aefe0" target="_blank">The “I have your back” engineering team that delivers | by Nik Diakov | SE4Humans | Medium</a></li>
+<li><a href="https://newsletter.posthog.com/p/job-interview-questions-engineers" target="_blank">(9) Job interview questions engineers should ask (but don't)</a></li>
+<li><a href="https://github.com/olahallengren/sql-server-maintenance-solution" target="_blank">olahallengren/sql-server-maintenance-solution: SQL Server Maintenance Solution</a></li>
+<li><a href="https://canitrundoom.org/" target="_blank">Can It Run Doom? An Archive of All Known Ports.</a></li>
+<li><a href="https://staysaasy.com/management/2025/06/02/your-manager-is-not-your-best-friend.html" target="_blank">Your Manager Is Not Your Best Friend | Stay SaaSy</a></li>
+<li><a href="https://github.com/zumerlab/snapdom" target="_blank">zumerlab/snapdom: snapDOM captures HTML elements to images with exceptional speed and accuracy.</a></li>
+<li><a href="https://github.com/Azure/azure-mcp" target="_blank">Azure/azure-mcp: The Azure MCP Server, bringing the power of Azure to your agents.</a></li>
+</OL>
+<OL>
+<li><a href="https://blog.swgillespie.me/posts/monorepo-ingredients/" target="_blank">The Ingredients of a Productive Monorepo</a></li>
+<li><a href="https://devblogs.microsoft.com/dotnet/emit-logs-on-demand-with-log-buffering/?ocid=dotnet_eml_tnp_autoid223_title" target="_blank">Emit logs on-demand with log buffering - .NET Blog</a></li>
+<li><a href="https://mikemcquaid.com/why-open-source-maintainers-thrive-in-the-llm-era/?utm_source=changelog-news" target="_blank">Why Open Source Maintainers Thrive in the LLM Era | Mike McQuaid</a></li>
+<li><a href="https://addyo.substack.com/p/the-prompt-engineering-playbook-for" target="_blank">(9) The Prompt Engineering Playbook for Programmers</a></li>
+<li><a href="https://www.kdnuggets.com/32-mcp-servers-you-need-to-check-out-now" target="_blank">32 MCP Servers You Need To Check Out Now - KDnuggets</a></li>
+<li><a href="https://www.kdnuggets.com/the-art-of-writing-readable-python-functions" target="_blank">The Art of Writing Readable Python Functions - KDnuggets</a></li>
+<li><a href="https://github.com/VERT-sh/VERT" target="_blank">VERT-sh/VERT: The next-generation file converter. Open source, fully local* and free forever.</a></li>
+<li><a href="https://pashabitz.substack.com/p/the-software-engineering-kawagara" target="_blank">(9) The Software Engineering Kanagawa Moment - by Pasha</a></li>
+<li><a href="https://devblogs.microsoft.com/dotnet/circuit-breaker-policy-finetuning-best-practice/?" target="_blank">Circuit Breaker Policy Fine-tuning Best Practice - .NET Blog</a></li>
+<li><a href="https://github.com/kanbn/kan" target="_blank">kanbn/kan: The open source Trello alternative.</a></li>
+</OL>
+<OL>
+<li><a href="https://dansinker.com/posts/2025-05-23-who-cares/" target="_blank">The Who Cares Era | dansinker.com</a></li>
+<li><a href="https://lg.substack.com/p/the-thing-you-are-expert-at-will" target="_blank">(9) The Thing You Are Expert at Will Be Your Career Downfall</a></li>
+<li><a href="https://newsletter.rafapaez.com/p/no-thanks-my-7-non-negotiables-for" target="_blank">(9) No Thanks: My 7 Non-Negotiables for a Fair Interview Process</a></li>
+<li><a href="https://www.jetbrains.com/guide/dotnet/tips/experimental-attribute/" target="_blank">C# Experimental Attribute. - JetBrains Guide</a></li>
+<li><a href="https://andrewlock.net/using-the-new-ai-template-to-create-a-chatbot-about-a-website/" target="_blank">Using the new AI template to create a chatbot about a website</a></li>
+<li><a href="https://www.meziantou.net/use-csharp-14-extensions-to-simplify-enum-parsing.htm" target="_blank">Use C# 14 extensions to simplify enum Parsing - Meziantou's blog</a></li>
+<li><a href="https://www.tabsoverspaces.com/233949-nullable-bool-and-if-statement" target="_blank">Nullable bool and if statement | tabs ↹ over ␣ ␣ ␣ spaces by Jiří {x2} Činčura</a></li>
+<li><a href="https://www.summer.io/blog/duckdb-is-a-protocol" target="_blank">DuckDB is a protocol</a></li>
+<li><a href="https://www.scientificamerican.com/article/inside-the-secret-meeting-where-mathematicians-struggled-to-outsmart-ai/" target="_blank">Inside the Secret Meeting Where Mathematicians Struggled to Outsmart AI | Scientific American</a></li>
+<li><a href="https://www.danielputtick.com/writing/mapbox-postmortem-interview.html" target="_blank">Dan Puttick</a></li>
+</OL>
+<OL>
+<li><a href="https://about.gitlab.com/blog/how-we-decreased-gitlab-repo-backup-times-from-48-hours-to-41-minutes/" target="_blank">How we decreased GitLab repo backup times from 48 hours to 41 minutes</a></li>
+<li><a href="https://gist.github.com/davidfowl/b408af870d4b5b54a28bf18bffa127e1" target="_blank">Aspire Resource Model: Concepts, Design, and Authoring Guidance</a></li>
+<li><a href="https://github.com/hotheadhacker/no-as-a-service/" target="_blank">hotheadhacker/no-as-a-service: No-as-a-Service (NaaS) is a simple API that returns a random rejection reason. Use it when you need a realistic excuse, a fun “no,” or want to simulate being turned down in style.</a></li>
+<li><a href="https://awstip.com/how-to-add-openapi-swagger-in-an-azure-function-edce37c0a8af" target="_blank">How to add (OpenAPI) Swagger in an Azure Function | by Cosmin Vladutu | May, 2025 | AWS Tip</a></li>
+<li><a href="https://bartwullems.blogspot.com/2025/06/api-contracts-and-nullability-in-aspnet.html" target="_blank">API contracts and nullability in ASP.NET Core</a></li>
+<li><a href="https://csharp.christiannagel.com/2025/06/05/error-the-delegate-requestdelegate-does-not-take-x-arguments-experiences-with-minimal-apis/" target="_blank">Error: The Delegate RequestDelegate does not take X arguments – Experiences with minimal APIs – blogs.cninnovation.com</a></li>
+<li><a href="https://sebastiano.tronto.net/blog/2025-06-06-webdev/" target="_blank">A masochist's guide to web development | Sebastiano Tronto</a></li>
+<li><a href="https://flightaware.engineering/falsehoods-programmers-believe-about-aviation/?utm_source=bonobopress&utm_medium=newsletter&utm_campaign=2071" target="_blank">Falsehoods Programmers Believe About Aviation</a></li>
+<li><a href="https://www.totaltypescript.com/concepts/the-prettify-helper" target="_blank">The `Prettify` Helper | Total TypeScript</a></li>
+<li><a href="https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW" target="_blank">Google Cloud Service Health</a></li>
+</OL>
+<OL>
+<li><a href="https://review.firstround.com/the-25-micro-habits-of-high-impact-managers/" target="_blank">The 25 Micro-Habits of High-Impact Managers</a></li>
+<li><a href="https://github.com/spaghettidba/WorkloadTools" target="_blank">spaghettidba/WorkloadTools: A collection of tools to collect, analyze and replay SQL Server workloads, on premises and in the cloud</a></li>
+<li><a href="https://martinfowler.com/articles/expert-generalist.html" target="_blank">Expert Generalists</a></li>
+<li><a href="https://zed.dev/blog/software-craftsmanship-in-the-era-of-vibes" target="_blank">The Case for Software Craftsmanship in the Era of Vibes — Zed's Blog</a></li>
+<li><a href="https://henrikwarne.com/2025/06/15/lessons-from-9-more-years-of-tricky-bugs/" target="_blank">Lessons From 9 More Years of Tricky Bugs | Henrik Warne's blog</a></li>
+<li><a href="https://blog.codingmilitia.com/2025/06/11/how-ive-been-building-apis-and-microservices-lately-feat-csharp-dotnet/" target="_blank">How I've been building APIs and microservices lately (feat. C# & .NET) | Coding Militia</a></li>
+<li><a href="https://simonwillison.net/2025/Jun/6/six-months-in-llms/" target="_blank">The last six months in LLMs, illustrated by pelicans on bicycles</a></li>
+<li><a href="https://yoh.dev/lightweight-observer-chains" target="_blank">Lightweight observer chains | One dev’s thoughts</a></li>
+<li><a href="https://github.com/Orange-OpenSource/hurl" target="_blank">Orange-OpenSource/hurl: Hurl, run and test HTTP requests with plain text.</a></li>
+<li><a href="https://guides.scalar.com/scalar/scalar-api-references/integrations/net-aspire" target="_blank">.NET Aspire | Scalar</a></li>
+</OL>
+<OL>
+<li><a href="https://www.lenareinhard.com/articles/managing-up-debugging-the-most-critical-relationship-in-your-work-life-amp-working-better-with-an-imperfect-boss" target="_blank">Managing Up: Debugging the most critical relationship in your work life & Working Better with an imperfect boss — Lena Reinhard</a></li>
+<li><a href="https://blog.prateekjain.dev/7-open-source-diagram-as-code-tools-you-should-try-d13d0e972601" target="_blank">7 Open Source Diagram-as-Code Tools You Should Try | by Prateek Jain | Jun, 2025 | Medium</a></li>
+<li><a href="https://text-to-svg.com/" target="_blank">Convert Text to SVG Path | Text-To-SVG.com</a></li>
+<li><a href="https://angular.dev/ai/develop-with-ai#providing-context-with-llmstxt" target="_blank">LLM prompts and AI IDE setup • Angular</a></li>
+<li><a href="https://refactoringenglish.com/chapters/release-announcements/" target="_blank">How to Write Compelling Software Release Announcements · Refactoring English</a></li>
+<li><a href="https://www.telerik.com/blogs/blazor-basics-integrating-third-party-apis-blazor-webassembly" target="_blank">Blazor Basics: Third-Party APIs in Blazor WebAssembly</a></li>
+<li><a href="https://medium.com/academy-team/which-data-architecture-should-i-choose-for-my-workplace-a-data-engineers-approach-f913b71d8ee6" target="_blank">Which Data Architecture Should I Choose for My Workplace? — A Data Engineer’s Approach | by Dr. Fatih Hattatoglu | Academy Team | Medium</a></li>
+<li><a href="https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/" target="_blank">Git Notes: git's coolest, most unloved­ feature - Tyler Cipriani</a></li>
+<li><a href="https://simonwillison.net/2025/May/26/notes/" target="_blank">GitHub issues for notes</a></li>
+<li><a href="https://blog.alexmaccaw.com/how-to-vibe-code-as-a-senior-engineer/" target="_blank">How to Vibe Code as a Senior Engineer</a></li>
+</OL>
+<OL>
+<li><a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank">awesome-selfhosted/awesome-selfhosted: A list of Free Software network services and web applications which can be hosted on your own servers</a></li>
+<li><a href="https://utcc.utoronto.ca/~cks/space/blog/tech/OpenSourceTwoWorlds" target="_blank">Chris's Wiki :: blog/tech/OpenSourceTwoWorlds</a></li>
+<li><a href="https://www.softwaremaxims.com/blog/not-a-supplier" target="_blank">I am not a supplier | Musings about software</a></li>
+<li><a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/tee-object?view=powershell-7.5" target="_blank">Tee-Object (Microsoft.PowerShell.Utility) - PowerShell | Microsoft Learn</a></li>
+<li><a href="https://foundercoach.medium.com/how-to-deal-with-a-toxic-top-performer-b535f3268fc1" target="_blank">How to Deal With a Toxic Top-Performer | by Dave Bailey | Jun, 2025 | Medium</a></li>
+<li><a href="https://newsletter.pragmaticengineer.com/p/software-engineering-with-llms-in-2025" target="_blank">Software engineering with LLMs in 2025: reality check</a></li>
+</OL>

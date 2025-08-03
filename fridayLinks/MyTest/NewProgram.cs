@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MyTest
 {
@@ -16,6 +17,51 @@ namespace MyTest
             Console.WriteLine("OpenLive Writer Post Creator");
             Console.WriteLine("=============================");
 
+            var ol = BookmarkParser.ParseBookmarksFromFile("bookmarks.txt");
+            MessageBox.Show($"Parsed {ol.Count} bookmark collections from file.");
+            var startDate= new DateTime(2025, 12, 26,7,00,00);
+            var draftsFolder1 = GetOpenLiveWriterDraftsFolder();
+            for (var realI= 0; realI < ol.Count; realI += 2)
+            {
+                var i= realI/2;
+                var nr = 541 + i;
+                //if(nr<=535)
+                //    continue; // skip some posts for testing
+                //if(nr> 540)
+                //    continue; // stop after some posts for testing
+                var name = "Friday Links " + nr;
+                var collection = ol[realI];
+                var col2= ol[realI + 1];
+                string contents="<OL>";
+                foreach (var bookmark in collection.Bookmarks)
+                {
+                    contents += $@"<li><a href=""{bookmark.Url}"" target=""{bookmark.Target}"">{bookmark.Title}</a></li>";
+                }
+                foreach (var bookmark in col2.Bookmarks)
+                {
+                    contents += $@"<li><a href=""{bookmark.Url}"" target=""{bookmark.Target}"">{bookmark.Title}</a></li>";
+                }
+                contents += "</OL>";
+                var post1 = new BlogPost
+                {
+                    Id = Guid.NewGuid().ToString("D"),
+                    Title = name,
+                    DatePublished = startDate.AddDays(i*7),
+                    DatePublishedOverride = startDate.AddDays(i*7),
+                    Contents = contents,
+                    //Categories = [ "Programming", "C#", "Blogging" ],
+                };
+
+                // Save the post
+                var fileName1 = $"{SanitizeFileName(post1.Title)}.wpost";
+                var filePath1 = Path.Combine(draftsFolder1, fileName1);
+
+                Console.WriteLine("Creating hardcoded blog post...");
+                OpenLiveWriterPostGenerator.SavePost(post1, filePath1);
+
+            }
+
+            return;
             // Create a hardcoded blog post
             var post = new BlogPost
             {
