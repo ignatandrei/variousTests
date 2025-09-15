@@ -101,5 +101,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarkdownToHtmlLib\MarkdownToHtmlLib.csproj">
+      <Project>{36d2b7db-11bf-987b-d813-86a8a7f499ef}</Project>
+      <Name>MarkdownToHtmlLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

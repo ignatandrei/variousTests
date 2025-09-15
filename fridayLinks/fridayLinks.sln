@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenLiveWriter.Interop", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTest", "MyTest\MyTest.csproj", "{A09352C8-A081-4300-A79E-963506F587FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownToHtmlLib", "MarkdownToHtmlLib\MarkdownToHtmlLib.csproj", "{36D2B7DB-11BF-987B-D813-86A8A7F499EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{A09352C8-A081-4300-A79E-963506F587FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A09352C8-A081-4300-A79E-963506F587FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A09352C8-A081-4300-A79E-963506F587FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D2B7DB-11BF-987B-D813-86A8A7F499EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D2B7DB-11BF-987B-D813-86A8A7F499EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D2B7DB-11BF-987B-D813-86A8A7F499EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D2B7DB-11BF-987B-D813-86A8A7F499EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

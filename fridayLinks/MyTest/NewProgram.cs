@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ namespace MyTest
 {
     internal class NewProgram
     {
-        public static void MainX()
+        public static void GenerateFromBookmarks()
         {
             Console.WriteLine("OpenLive Writer Post Creator");
             Console.WriteLine("=============================");
@@ -193,6 +194,29 @@ public class BlogPost
             Console.WriteLine($"Creating OpenLive Writer drafts folder: {defaultPath}");
             Directory.CreateDirectory(defaultPath);
             return defaultPath;
+        }
+
+        internal static void GeneratePostFromHtml(string outFile, string html)
+        {
+            var draftsFolder1 = GetOpenLiveWriterDraftsFolder();
+            var name = Path.GetFileNameWithoutExtension(outFile);
+            var post1 = new BlogPost
+            {
+                Id = Guid.NewGuid().ToString("D"),
+                Title = name,
+                DatePublished = DateTime.Now.AddDays(10),
+                DatePublishedOverride = DateTime.Now.AddDays(10),
+                Contents = html,
+                //Categories = [ "Programming", "C#", "Blogging" ],
+            };
+
+            // Save the post
+            var fileName1 = $"{SanitizeFileName(post1.Title)}.wpost";
+            var filePath1 = Path.Combine(draftsFolder1, fileName1);
+
+            Console.WriteLine("Creating hardcoded blog post...");
+            OpenLiveWriterPostGenerator.SavePost(post1, filePath1);
+
         }
     }
 }
