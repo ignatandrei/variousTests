@@ -30,21 +30,21 @@ namespace MyTest
             var files = di.GetFiles("*.md", SearchOption.AllDirectories);
             foreach (var file in files)
             {
-                switch(file.Name)
-                {
-                    case "Home.md":
-                    case "Csharp01.md":
-                    case "Csharp02.md":
-                    case "Csharp03.md":
-                    case "Csharp04.md":
-                    case "Csharp05.md":
-                    case "Csharp06.md":
-                    case "Csharp07.md":
-                    case "Csharp08.md":
-                        continue;
-                    default:
-                        break;
-                }
+                //switch(file.Name)
+                //{
+                //    case "Home.md":
+                //    case "Csharp01.md":
+                //    case "Csharp02.md":
+                //    case "Csharp03.md":
+                //    case "Csharp04.md":
+                //    case "Csharp05.md":
+                //    case "Csharp06.md":
+                //    case "Csharp07.md":
+                //    case "Csharp08.md":
+                //        continue;
+                //    default:
+                //        break;
+                //}
                 var html = MarkdownConverter.ToHtml(File.ReadAllText(file.FullName));
                 //html = html.Replace("<pre><code class=\"language-csharp\">", "[code lang='csharp']");
                 //html = html.Replace("</code></pre>", "[/code]");
